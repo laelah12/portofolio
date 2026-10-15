@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya | Laelah</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #edf3fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(25, 60, 100, 0.10);
+        }
+
+        header {
+            background: #1d426f;
+            color: white;
+            padding: 18px 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: #c5ddff;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 45px 35px;
+            background: #f5f8fc;
+        }
+
+        .hero img {
+            width: 210px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid white;
+            box-shadow: 0 3px 12px #d3deec;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .sapaan {
+            color: #557ba8;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            color: #1d426f;
+            font-size: 32px;
+            margin: 5px 0;
+        }
+
+        .hero h3 {
+            font-size: 17px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .tombol {
+            display: inline-block;
+            background: #1d426f;
+            color: white;
+            padding: 9px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            margin: 3px 5px 3px 0;
+        }
+
+        .tombol:hover {
+            background: #315f91;
+        }
+
+        section {
+            padding: 30px 35px;
+            border-bottom: 1px solid #edf0f5;
+        }
+
+        section h2 {
+            color: #1d426f;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 14px;
+        }
+
+        .pendidikan {
+            background: #f8fafd;
+            padding: 18px;
+            border-left: 4px solid #1d426f;
+            border-radius: 5px;
+        }
+
+        .pendidikan h3 {
+            color: #294e78;
+            font-size: 16px;
+        }
+
+        .daftar-keahlian {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .keahlian {
+            background: #e8f0fb;
+            color: #1d426f;
+            padding: 7px 14px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .proyek-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .proyek {
+            border: 1px solid #e1e8f1;
+            padding: 18px;
+            border-radius: 8px;
+            background: white;
+            transition: 0.2s;
+        }
+
+        .proyek:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 14px #e4ebf3;
+        }
+
+        .proyek h3 {
+            color: #1d426f;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .proyek p {
+            font-size: 13px;
+        }
+
+        .video-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #f5f8fc;
+            border: 1px solid #e1e8f1;
+            border-radius: 10px;
+        }
+
+        .video-box video {
+            display: block;
+            width: 100%;
+            max-height: 340px;
+            border-radius: 6px;
+            background: #111;
+        }
+
+        .kontak {
+            background: #f8fafd;
+        }
+
+        .kontak p {
+            margin-bottom: 8px;
+        }
+
+        .kontak a {
+            color: #1d426f;
+            text-decoration: none;
+        }
+
+        .kontak a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1d426f;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: 94%;
+                margin: 15px auto;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .hero img {
+                width: 180px;
+                height: 195px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            section {
+                padding: 25px 20px;
+            }
+
+            .proyek-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <nav>
+            <div class="logo">Portofolio Saya</div>
+
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" id="beranda">
+        <img src="foto.jpg" alt="Foto Laelah"
+             onerror="this.style.display='none'">
+
+        <div class="hero-text">
+            <span class="sapaan">Selamat Datang di Website</span>
+            <h1>Portofolio Saya</h1>
+            <h3>Laelah | Mahasiswa Sistem Informasi</h3>
+
+            <p>
+                Mahasiswa semester 5 Universitas Pamulang yang sedang
+                belajar dan mengembangkan kemampuan di bidang Web Development.
+            </p>
+
+            <a href="#kontak" class="tombol">Hubungi Saya</a>
+            <a href="#proyek" class="tombol">Lihat Proyek</a>
+        </div>
+    </div>
+
+    <section id="tentang">
+        <h2>Tentang Saya</h2>
+        <p>
+            Perkenalkan, saya Laelah, mahasiswa Program Studi Sistem Informasi
+            semester 5 di Universitas Pamulang. Saya tertarik dengan dunia
+            teknologi, khususnya pembuatan website. Melalui perkuliahan dan
+            latihan mandiri, saya terus belajar membuat website yang rapi,
+            menarik, dan mudah digunakan.
+        </p>
+    </section>
+
+    <section id="pendidikan">
+        <h2>Riwayat Pendidikan</h2>
+
+        <div class="pendidikan">
+            <h3>Universitas Pamulang</h3>
+            <p>Program Studi: Sistem Informasi</p>
+            <p>Jenjang: S1</p>
+            <p>Semester: 5</p>
+        </div>
+    </section>
+
+    <section id="keahlian">
+        <h2>Keahlian</h2>
+        <p style="margin-bottom: 15px;">
+            Beberapa kemampuan yang sedang saya pelajari dan kembangkan:
+        </p>
+
+        <div class="daftar-keahlian">
+            <span class="keahlian">HTML</span>
+            <span class="keahlian">CSS</span>
+            <span class="keahlian">JavaScript Dasar</span>
+            <span class="keahlian">Microsoft Word</span>
+            <span class="keahlian">Microsoft Excel</span>
+            <span class="keahlian">VS Code</span>
+        </div>
+    </section>
+
+    <section id="proyek">
+        <h2>Proyek Saya</h2>
+
+        <div class="proyek-list">
+            <div class="proyek">
+                <h3>Website Profil Diri</h3>
+                <p>
+                    Website sederhana yang berisi informasi diri,
+                    pendidikan, dan kontak menggunakan HTML dan CSS.
+                </p>
+            </div>
+
+            <div class="proyek">
+                <h3>Website Portofolio</h3>
+                <p>
+                    Halaman portofolio untuk menampilkan profil,
+                    keahlian, dan hasil latihan di bidang web.
+                </p>
+            </div>
+
+            <div class="proyek">
+                <h3>Latihan Desain Web</h3>
+                <p>
+                    Latihan mengatur warna, tulisan, menu navigasi,
+                    dan tata letak agar website lebih nyaman dilihat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>Video Kegiatan</h2>
+
+        <p style="margin-bottom: 15px;">
+            Berikut video kegiatan dan dokumentasi saya.
+        </p>
+
+        <div class="video-box">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung pemutar video.
+            </video>
+        </div>
+    </section>
+
+    <section id="kontak" class="kontak">
+        <h2>Kontak Saya</h2>
+
+        <p>
+            Email:
+            <a href="mailto:laelahh121@gmail.com">
+                laelahh121@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Terima kasih sudah mengunjungi website portofolio saya.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Portofolio Laelah | Mahasiswa Sistem Informasi</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
